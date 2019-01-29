@@ -11,9 +11,9 @@ def load_model():
     パスにしていしたpklファイルをmodelに読み込む
     '''
     global model
-    print("学習済みmodelを読み込んでいます...")
+    print("")
     model = joblib.load("./model/sample-model.pkl")
-    print("ロードが完成しました")
+    print("")
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -41,6 +41,6 @@ def predict():
 
 if __name__ == "__main__":
     load_model()
-    print("サーバーを開始しています.....")
+    print("")
     app.run(host='0.0.0.0', port=5000)
 
